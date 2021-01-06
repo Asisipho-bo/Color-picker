@@ -1,3 +1,3 @@
 # Color-picker
 
-Table of contents
+## Table of contents
