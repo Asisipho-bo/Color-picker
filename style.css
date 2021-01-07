@@ -1,1 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    background-image: url(images/colors.jpg)
+  }
 
+.content{
+    align-content: center;
+    background-color: rgb(250, 245, 245);
+}
+
+
+  
+  ul{
+    list-style:none;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 15px;
+  }
+  
+  ul li{
+    padding-bottom: 3px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  #red{
+    background-color: #ff0000;
+  }
+  
+  #blue{
+    background-color:#349feb;
+  }
+  
+  #pink{
+    background-color:#eb34a5;
+  }
+  
+  #orange{
+    background-color: #de541d;
+  }
+
+  #green{
+      background-color: #32a852;
+  }
+  #burgundy{
+      background-color: #440603;
+  }
+
+  #pale-pink{
+      background-color: rgb(235, 145, 160);
+  }
+
+  #maroon{
+      background-color: rgb(151, 10, 10);
+  }
+
+  #turquoise{
+      background-color: rgb(0, 204, 255);
+  }
+
+  #teal{
+      background-color: rgb(0, 255, 191);
+  }
+
+  #yellow{
+      background-color: yellow;
+  }
+
+  #lilac{
+      background-color: rgb(216, 138, 216);
+  }
+
+  #grey{
+      background-color: grey;
+  }
+
+  #lemon{
+      background-color: rgb(226, 223, 30);
+  }
+
+  #black{
+      background-color: black;
+  }
+
+  #counter{
+      padding: 12px 26px;
+      border-radius: 25px;
+      outline: rgb(221, 219, 219);
+      font-size: 16px;
+  }
+
+  #cart-btn{
+      padding: 15px 150px;
+      background-color: black;
+      border-radius: 25px;
+  }
+
+  hr{
+    width: 100%;
+    background-color: black;
+
+  }
