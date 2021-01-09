@@ -47,25 +47,25 @@
       </div>
       <p class="pt-2 pl-3">ONLINE EXCLUSIVE</p>
 
-      <h5 class="bold" id="color-label">COLOR:</h5>
+      <h5 class="bold" id="color-label">COLOR:<span id="color-name"></span></h5>
       
       <div class="colors">
           <ul class="color-circles">
-              <li class="color-item" id="Red"><button class="color-btn bg-danger"   onclick='document.getElementById("color-label").innerHTML = "Color: Red"'></button></li>
-              <li class="color-item" id="Blue"><button class="color-btn bg-primary" onclick='document.getElementById("color-label").innerHTML = "Color: Blue"'></button></li>
-              <li class="color-item" id="Orange"><button class="color-btn bg-warning" onclick='document.getElementById("color-label").innerHTML = "Color: Orange"'></button></li>
-              <li class="color-item" id="Yellow"><button class="color-btn bg-success"onclick='document.getElementById("color-label").innerHTML = "Color: Yellow"'></button></li>
-              <li class="color-item" id="Dark-grey"><button class="color-btn bg-dark" onclick='document.getElementById("color-label").innerHTML = "Color: Black"'></button></li>
-              <li class="color-item" id="Teal"><button class="color-btn bg-info" onclick='document.getElementById("color-label").innerHTML = "Color: Teal"'></button></li>
-              <li class="color-item" id="Grey"><button class="color-btn bg-secondary" onclick='document.getElementById("color-label").innerHTML = "Color: Grey"'></button></li>
-              <li class="color-item" id="Orange"><button class="color-btn bg-warning" onclick='document.getElementById("color-label").innerHTML = "Color: Orange"'></button></li>
-              <li class="color-item" id="Blue"><button class="color-btn bg-primary" onclick='document.getElementById("color-label").innerHTML = "Color: Blue"'></button></li>
-              <li class="color-item" id="Light-grey"><button class="color-btn bg-muted" onclick='document.getElementById("color-label").innerHTML = "Color: Light grey"'></button></li>
-              <li class="color-item" id="Teal"><button class="color-btn bg-info" onclick='document.getElementById("color-label").innerHTML = "Color: Teal"'></button></li>
-              <li class="color-item" id="Yellow"><button class="color-btn bg-success" onclick='document.getElementById("color-label").innerHTML = "Color: Yellow"'></button></li>
-              <li class="color-item" id="Dark-grey"><button class="color-btn bg-dark" onclick='document.getElementById("color-label").innerHTML = "Color: Black"'></button></li>
-              <li class="color-item" id="Red"><button class="color-btn bg-danger" onclick='document.getElementById("color-label").innerHTML = "Color: Red"'></button></li>
-              <li class="color-item" id="Grey"><button class="color-btn bg-secondary" onclick='document.getElementById("color-label").innerHTML = "Color: Grey"'></button></li>
+            <li class="color-item" id="Red"><button class="color-btn bg-danger"   onclick='document.getElementById("color-name").innerHTML = " Red"'></button></li>
+            <li class="color-item" id="Blue"><button class="color-btn bg-primary" onclick='document.getElementById("color-name").innerHTML = " Blue"'></button></li>
+            <li class="color-item" id="Orange"><button class="color-btn bg-warning" onclick='document.getElementById("color-name").innerHTML = " Orange"'></button></li>
+            <li class="color-item" id="Yellow"><button class="color-btn bg-success"onclick='document.getElementById("color-name").innerHTML = " Green"'></button></li>
+            <li class="color-item" id="Dark-grey"><button class="color-btn bg-dark" onclick='document.getElementById("color-name").innerHTML = " Black"'></button></li>
+            <li class="color-item" id="Teal"><button class="color-btn bg-info" onclick='document.getElementById("color-name").innerHTML = " Teal"'></button></li>
+            <li class="color-item" id="Grey"><button class="color-btn bg-secondary" onclick='document.getElementById("color-name").innerHTML = " Grey"'></button></li>
+            <li class="color-item" id="Orange"><button class="color-btn bg-warning" onclick='document.getElementById("color-name").innerHTML = " Orange"'></button></li>
+            <li class="color-item" id="Blue"><button class="color-btn bg-primary" onclick='document.getElementById("color-name").innerHTML = " Blue"'></button></li>
+            <li class="color-item" id="Light-grey"><button class="color-btn bg-muted" onclick='document.getElementById("color-name").innerHTML = " Light grey"'></button></li>
+            <li class="color-item" id="Teal"><button class="color-btn bg-info" onclick='document.getElementById("color-name").innerHTML = " Teal"'></button></li>
+            <li class="color-item" id="Yellow"><button class="color-btn bg-success" onclick='document.getElementById("color-name").innerHTML = " Green"'></button></li>
+            <li class="color-item" id="Dark-grey"><button class="color-btn bg-dark" onclick='document.getElementById("color-name").innerHTML = " Black"'></button></li>
+            <li class="color-item" id="Red"><button class="color-btn bg-danger" onclick='document.getElementById("color-name").innerHTML = " Red"'></button></li>
+            <li class="color-item" id="Grey"><button class="color-btn bg-secondary" onclick='document.getElementById("color-name").innerHTML = " Grey"'></button></li>
             </ul>
          <p id="demo"></p>
       </div>
@@ -83,6 +83,7 @@
      <div class="modal-content w-50">
         <div class="modal-body">
           <p>Please add the quantity of the item you want</p>
+          <p id="color-id"></p>
           <div class="container">
             <div class="row">
               <div class="col">

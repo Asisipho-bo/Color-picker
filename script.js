@@ -1,9 +1,4 @@
-// Declare the colors
-
-
-//Get the button that displays color names
-
-
+// Display color names on the modal
 
 
 // Get the modal
