@@ -47,25 +47,25 @@
       </div>
       <p class="pt-2 pl-3">ONLINE EXCLUSIVE</p>
 
-      <h5 class="bold">COLOR:</h5><span class="current-color not-bold"></span>
+      <h5 class="bold" id="color-label">COLOR:</h5>
       
       <div class="colors">
           <ul class="color-circles">
-              <li class="color-item" id="Red"><button class="color-btn bg-danger" onclick="targetColorCircles(event)"></button></li>
-              <li class="color-item" id="Blue"><button class="color-btn bg-primary" onclick="targetColorCircles(event)"></button></li>
-              <li class="color-item" id="Orange"><button class="color-btn bg-warning" onclick="targetColorCircles(event)"></button></li>
-              <li class="color-item" id="Yellow"><button class="color-btn bg-success"onclick="targetColorCircles(event)"></button></li>
-              <li class="color-item" id="Dark-grey"><button class="color-btn bg-dark" onclick="targetColorCircles(event)"></button></li>
-              <li class="color-item" id="Teal"><button class="color-btn bg-info" onclick="targetColorCircles(event)"></button></li>
-              <li class="color-item" id="Grey"><button class="color-btn bg-secondary" onclick="targetColorCircles(event)"></button></li>
-              <li class="color-item" id="Orange"><button class="color-btn bg-warning" onclick="targetColorCircles(event)"></button></li>
-              <li class="color-item" id="Blue"><button class="color-btn bg-primary" onclick="targetColorCircles(event)"></button></li>
-              <li class="color-item" id="Light-grey"><button class="color-btn bg-muted" onclick="targetColorCircles(event)"></button></li>
-              <li class="color-item" id="Teal"><button class="color-btn bg-info" onclick="targetColorCircles(event)"></button></li>
-              <li class="color-item" id="Yellow"><button class="color-btn bg-success" onclick="targetColorCircles(event)"></button></li>
-              <li class="color-item" id="Dark-grey"><button class="color-btn bg-dark" onclick="targetColorCircles(event)"></button></li>
-              <li class="color-item" id="Red"><button class="color-btn bg-danger" onclick="targetColorCircles(event)"></button></li>
-              <li class="color-item" id="Grey"><button class="color-btn bg-secondary" onclick="targetColorCircles(event)"></button></li>
+              <li class="color-item" id="Red"><button class="color-btn bg-danger"   onclick='document.getElementById("color-label").innerHTML = "Color: Red"'></button></li>
+              <li class="color-item" id="Blue"><button class="color-btn bg-primary" onclick='document.getElementById("color-label").innerHTML = "Color: Blue"'></button></li>
+              <li class="color-item" id="Orange"><button class="color-btn bg-warning" onclick='document.getElementById("color-label").innerHTML = "Color: Orange"'></button></li>
+              <li class="color-item" id="Yellow"><button class="color-btn bg-success"onclick='document.getElementById("color-label").innerHTML = "Color: Yellow"'></button></li>
+              <li class="color-item" id="Dark-grey"><button class="color-btn bg-dark" onclick='document.getElementById("color-label").innerHTML = "Color: Black"'></button></li>
+              <li class="color-item" id="Teal"><button class="color-btn bg-info" onclick='document.getElementById("color-label").innerHTML = "Color: Teal"'></button></li>
+              <li class="color-item" id="Grey"><button class="color-btn bg-secondary" onclick='document.getElementById("color-label").innerHTML = "Color: Grey"'></button></li>
+              <li class="color-item" id="Orange"><button class="color-btn bg-warning" onclick='document.getElementById("color-label").innerHTML = "Color: Orange"'></button></li>
+              <li class="color-item" id="Blue"><button class="color-btn bg-primary" onclick='document.getElementById("color-label").innerHTML = "Color: Blue"'></button></li>
+              <li class="color-item" id="Light-grey"><button class="color-btn bg-muted" onclick='document.getElementById("color-label").innerHTML = "Color: Light grey"'></button></li>
+              <li class="color-item" id="Teal"><button class="color-btn bg-info" onclick='document.getElementById("color-label").innerHTML = "Color: Teal"'></button></li>
+              <li class="color-item" id="Yellow"><button class="color-btn bg-success" onclick='document.getElementById("color-label").innerHTML = "Color: Yellow"'></button></li>
+              <li class="color-item" id="Dark-grey"><button class="color-btn bg-dark" onclick='document.getElementById("color-label").innerHTML = "Color: Black"'></button></li>
+              <li class="color-item" id="Red"><button class="color-btn bg-danger" onclick='document.getElementById("color-label").innerHTML = "Color: Red"'></button></li>
+              <li class="color-item" id="Grey"><button class="color-btn bg-secondary" onclick='document.getElementById("color-label").innerHTML = "Color: Grey"'></button></li>
             </ul>
          <p id="demo"></p>
       </div>
@@ -81,12 +81,25 @@
       <!-- Modal content -->
       <div class="container-fluid">
      <div class="modal-content w-50">
-        <span class="close">&times;</span>
         <div class="modal-body">
           <p>Please add the quantity of the item you want</p>
-          <button id="subtract">-</button>
-          <input type="number" value="0"></input>
-           <button id="add">+</button>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <button id="add">+</button>
+                <input type="text" id="quantity" value="0"></input>
+                <button id="subtract">-</button>
+              </div>
+            </div>
+               <div class="row"> 
+                 <div class="col">
+                  <span class="checkout"><button type="button" id="confirm" class="btn  btn-sm bg-primary" 
+                    onclick='document.getElementById("add-to-cart").innerHTML = "Checkout"'>Agree</button></span>
+                    <span class="close"><button type="button" id="confirm2" class="btn  btn-rounded btn-sm bg-danger" 
+                      onclick="document.getElementById('myModal').style.display='none'">Cancel</button></span>
+                 </div>
+               </div>
+           </div>
         </div>
       </div>
       <div id="overlay"></div>
@@ -98,16 +111,18 @@
         <p>DETAILS</p>
         <hr class="my-4">
          <!-- Trigger/Open The link Modal -->
-       <button id="need-help"><a href="#linkModal">Need Help?</a></button>
+       <button class="bg-light pb-3" id="need-help"><a href="#linkModal">Need Help?</a></button>
        <!-- The Modal -->
        <div id="linkModal" class="modal">
 
       <!-- Modal content -->
-      <div class="container-fluid">
+      <div class="container-fluid pt-3">
      <div class="modal-content w-50">
-        <span class="close">&times;</span>
+        <span class="dismiss">&times;</span>
         <div class="modal-body">
-          <p>For more information on:<br> <a href="#">Shipping</a><br> <a href="#">Returns</a><br><a href="#">Promotions</a><br>Customer service line: 0800 745 458</p>
+          <p><h5 class="text-center">For any queries, click on the links below:</h5><br> <a href="#">Shipping</a>
+            <br> <a href="#">Returns</a><br><a href="#">Promotions</a><br>
+            or reach us on our Customer service line: 0800 745 458</p>
           
         </div>
       </div>

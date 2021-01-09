@@ -1,3 +1,10 @@
+// Declare the colors
+
+
+//Get the button that displays color names
+
+
+
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -6,7 +13,7 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementById("add-to-cart");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("checkout")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
@@ -25,6 +32,40 @@ window.onclick = function(event) {
   }
 }
 
+
+//Wnen user clicks +, add 1. When user clicks -, subtract 1
+var valueCount
+
+//Plus button
+document.querySelector('#add').addEventListener('click', function()
+{
+  //getting value of input
+  valueCount = document.getElementById('quantity').value;
+  
+  //input value increment by 1
+  valueCount++;
+
+  //Setting increment input value
+  document.getElementById('quantity').value = valueCount
+})
+
+//Minus button
+document.querySelector('#subtract').addEventListener('click', function()
+{
+  //getting value of input
+  valueCount = document.getElementById('quantity').value;
+  
+  //input value increment by 1
+  valueCount--;
+
+  //Setting increment input value
+  document.getElementById('quantity').value = valueCount
+})
+
+
+
+
+
 // Get the modal
 var Modal = document.getElementById("linkModal");
 
@@ -32,7 +73,7 @@ var Modal = document.getElementById("linkModal");
 var btn = document.getElementById("need-help");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("dismiss")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {

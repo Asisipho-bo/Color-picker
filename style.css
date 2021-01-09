@@ -109,6 +109,7 @@ ul{
   color: white;
   font-size: 30px;
   float: right;
+  clear: left;
 }
 
 #subtract{
@@ -127,7 +128,7 @@ input{
   float: right;
 }
 
-input[type="number"]
+input[type="text"]
 {
   margin-top: 20px;
   font-weight: bold;
@@ -151,8 +152,22 @@ input[type="number"]
   font-weight: bold;
 }
 
+.dismiss{
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
 .close:hover,
 .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dismiss:hover,
+.dismiss:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -161,6 +176,21 @@ input[type="number"]
 #need-help{
   outline: transparent;
   border: none;
-  background-color: white;
   color: #000;
+}
+
+#confirm{
+  padding: 10px 10px;
+  margin: 5px;
+  border-radius: 45px;
+  font-size: 15px;
+  float: right;
+}
+
+#confirm2{
+  padding: 10px 10px;
+  margin: 5px;
+  border-radius: 45px;
+  font-size: 15px;
+  float: right;
 }
