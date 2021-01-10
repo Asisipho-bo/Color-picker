@@ -1,6 +1,59 @@
 // Display color names on the modal
+function colorFunction() {
+  document.getElementById("color-name").innerHTML = " Red";
+  document.getElementById("actual-price").innerHTML =" R30.99";
+  document.getElementById("discount-price").innerHTML =" R23.35";
+  document.getElementById("color-id").innerHTML =" Red"
+}
 
+function colorFunction2() {
+  document.getElementById("color-name").innerHTML = " Blue";
+  document.getElementById("actual-price").innerHTML =" R32.99";
+  document.getElementById("discount-price").innerHTML =" R24.75";
+  document.getElementById("color-id").innerHTML =" Blue"
+}
 
+function colorFunction3() {
+  document.getElementById("color-name").innerHTML = " Orange";
+  document.getElementById("actual-price").innerHTML =" R35.99";
+  document.getElementById("discount-price").innerHTML =" R26.99";
+  document.getElementById("color-id").innerHTML =" Orange"
+}
+
+function colorFunction4() {
+  document.getElementById("color-name").innerHTML = " Green";
+  document.getElementById("actual-price").innerHTML =" R24.99";
+  document.getElementById("discount-price").innerHTML =" R18.75";
+  document.getElementById("color-id").innerHTML =" Green"
+}
+
+function colorFunction5() {
+  document.getElementById("color-name").innerHTML = " Dark-grey";
+  document.getElementById("actual-price").innerHTML =" R37.99";
+  document.getElementById("discount-price").innerHTML =" R28.5";
+  document.getElementById("color-id").innerHTML =" Dark-grey"
+}
+
+function colorFunction6() {
+  document.getElementById("color-name").innerHTML = " Teal";
+  document.getElementById("actual-price").innerHTML =" R44.99";
+  document.getElementById("discount-price").innerHTML =" R33.75";
+  document.getElementById("color-id").innerHTML =" Teal"
+}
+
+function colorFunction7() {
+  document.getElementById("color-name").innerHTML = " Grey";
+  document.getElementById("actual-price").innerHTML =" R31.99";
+  document.getElementById("discount-price").innerHTML =" R23.99";
+  document.getElementById("color-id").innerHTML =" Blue"
+}
+
+function colorFunction8() {
+  document.getElementById("color-name").innerHTML = " Light-grey";
+  document.getElementById("actual-price").innerHTML =" R33.99";
+  document.getElementById("discount-price").innerHTML =" R25.5";
+  document.getElementById("color-id").innerHTML =" Light-grey"
+}
 // Get the modal
 var modal = document.getElementById("myModal");
 

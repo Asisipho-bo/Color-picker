@@ -39,13 +39,10 @@
 
       <div class="row">
           <div class="col">
-            <h2 class="text-danger font-weight-bold">R0</h2>  
+            <h2 id="actual-price" class="text-danger font-weight-bold">R0</h2>  
           </div>
           <div class="col">
-              <h6 class="text-muted d-flex" id="Price">R0 </h6>
-          </div>
-          <div class="col">
-            <p id="discount-price" class="text-muted">R0  &nbsp &nbsp &nbsp &nbsp25% OFF</p>
+            <p><span id="discount-price" class="text-muted">R0</span>  <span class="text-muted">&nbsp &nbsp &nbsp &nbsp25% OFF</span></p>
           </div>
       </div>
       <p class="pt-2 pl-3">ONLINE EXCLUSIVE</p>
@@ -53,22 +50,22 @@
       <h5 class="bold" id="color-label">COLOR:<span id="color-name"></span></h5>
       
       <div class="colors">
-          <ul class="color-circles">
-            <li class="color-item"><button id="Red" class="color-btn bg-danger"  data-price="17.99" onclick="targetColorCircles(event)"></button></li>
-            <li class="color-item" id="Blue"><button class="color-btn bg-primary" onclick='document.getElementById("color-name").innerHTML = " Blue"'></button></li>
-            <li class="color-item" id="Orange"><button class="color-btn bg-warning" onclick='document.getElementById("color-name").innerHTML = " Orange"'></button></li>
-            <li class="color-item" id="Yellow"><button class="color-btn bg-success"onclick='document.getElementById("color-name").innerHTML = " Green"'></button></li>
-            <li class="color-item" id="Dark-grey"><button class="color-btn bg-dark" onclick='document.getElementById("color-name").innerHTML = " Black"'></button></li>
-            <li class="color-item" id="Teal"><button class="color-btn bg-info" onclick='document.getElementById("color-name").innerHTML = " Teal"'></button></li>
-            <li class="color-item" id="Grey"><button class="color-btn bg-secondary" onclick='document.getElementById("color-name").innerHTML = " Grey"'></button></li>
-            <li class="color-item" id="Orange"><button class="color-btn bg-warning" onclick='document.getElementById("color-name").innerHTML = " Orange"'></button></li>
-            <li class="color-item" id="Blue"><button class="color-btn bg-primary" onclick='document.getElementById("color-name").innerHTML = " Blue"'></button></li>
-            <li class="color-item" id="Light-grey"><button class="color-btn bg-muted" onclick='document.getElementById("color-name").innerHTML = " Light grey"'></button></li>
-            <li class="color-item" id="Teal"><button class="color-btn bg-info" onclick='document.getElementById("color-name").innerHTML = " Teal"'></button></li>
-            <li class="color-item" id="Yellow"><button class="color-btn bg-success" onclick='document.getElementById("color-name").innerHTML = " Green"'></button></li>
-            <li class="color-item" id="Dark-grey"><button class="color-btn bg-dark" onclick='document.getElementById("color-name").innerHTML = " Black"'></button></li>
-            <li class="color-item" id="Red"><button class="color-btn bg-danger" onclick='document.getElementById("color-name").innerHTML = " Red"'></button></li>
-            <li class="color-item" id="Grey"><button class="color-btn bg-secondary" onclick='document.getElementById("color-name").innerHTML = " Grey"'></button></li>
+          <ul id="color-circles">
+            <li class="color-item"><button id="Red" class="color-btn bg-danger"  onclick="colorFunction()"></button></li>
+            <li class="color-item"><button id="Blue" class="color-btn bg-primary" onclick="colorFunction2()" ></button></li>
+            <li class="color-item"><button id="Orange" class="color-btn bg-warning" onclick="colorFunction3()"></button></li>
+            <li class="color-item"><button id="Green" class="color-btn bg-success"onclick="colorFunction4()"></button></li>
+            <li class="color-item"><button id="Dark-grey" class="color-btn bg-dark" onclick="colorFunction5()"></button></li>
+            <li class="color-item"><button  id="Teal" class="color-btn bg-info" onclick="colorFunction6()"></button></li>
+            <li class="color-item"><button id="Grey" class="color-btn bg-secondary" onclick="colorFunction7()"></button></li>
+            <li class="color-item"><button  id="Orange" class="color-btn bg-warning" onclick="colorFunction3()"></button></li>
+            <li class="color-item"><button id="Blue" class="color-btn bg-primary" onclick="colorFunction2()"></button></li>
+            <li class="color-item"><button  id="Light-grey" class="color-btn bg-muted" onclick="colorFunction8()"></button></li>
+            <li class="color-item"><button  id="Teal" class="color-btn bg-info" onclick="colorFunction6()"></button></li>
+            <li class="color-item"><button id="Green" class="color-btn bg-success" onclick="colorFunction4()"></button></li>
+            <li class="color-item"><button  id="Dark-grey" class="color-btn bg-dark" onclick="colorFunction5()"></button></li>
+            <li class="color-item"><button id="Red" class="color-btn bg-danger" onclick="colorFunction()"></button></li>
+            <li class="color-item"><button id="Grey" class="color-btn bg-secondary" onclick="colorFunction7()"></button></li>
             </ul>
          <p id="demo"></p>
       </div>
@@ -76,7 +73,7 @@
         <h6>Size Guide</h6>
         <h6 class="pt-2 pb-2">Your Custom fit</h6>
        <button type="button" class="btn btn-outline-dark mr-3" id="counter">0</button>
-       <!-- Trigger/Open The Modal -->
+       <!-- Trigger/Open add to cart Modal -->
        <button id="add-to-cart">Add to Cart</button>
        <!-- The Modal -->
        <div id="myModal" class="modal">
@@ -85,8 +82,8 @@
       <div class="container-fluid">
      <div class="modal-content w-50">
         <div class="modal-body">
-          <p>Please add the quantity of the item you want</p>
-          <div id="color-id"></div>
+          <p class="mt-5">Please add the quantity of the item you want</p>
+          <div class="text-uppercase text-left font-weight-bold mt-5" id="color-id"></div>
           <div class="container">
             <div class="row">
               <div class="col">
