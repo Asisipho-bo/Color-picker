@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <title>Color Picker</title>
   <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
-  integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="content container-fluid bg-light w-75">
@@ -33,16 +33,19 @@
               </svg>
             </div>
             <div class="col pb-3">
-                <h5 class="text-secondary">1,3456578 reviews</h5>
+                <h5 class="text-muted">1,3456578 reviews</h5>
             </div>
       </div>
 
       <div class="row">
           <div class="col">
-            <h2 class="text-danger font-weight-bold">$14.99</h2>  
+            <h2 class="text-danger font-weight-bold">R0</h2>  
           </div>
           <div class="col">
-              <h6 class="text-secondary d-flex">$17.99 &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp 25% OFF</h6>
+              <h6 class="text-muted d-flex" id="Price">R0 </h6>
+          </div>
+          <div class="col">
+            <p id="discount-price" class="text-muted">R0  &nbsp &nbsp &nbsp &nbsp25% OFF</p>
           </div>
       </div>
       <p class="pt-2 pl-3">ONLINE EXCLUSIVE</p>
@@ -51,7 +54,7 @@
       
       <div class="colors">
           <ul class="color-circles">
-            <li class="color-item" id="Red"><button class="color-btn bg-danger"   onclick='document.getElementById("color-name").innerHTML = " Red"'></button></li>
+            <li class="color-item"><button id="Red" class="color-btn bg-danger"  data-price="17.99" onclick="targetColorCircles(event)"></button></li>
             <li class="color-item" id="Blue"><button class="color-btn bg-primary" onclick='document.getElementById("color-name").innerHTML = " Blue"'></button></li>
             <li class="color-item" id="Orange"><button class="color-btn bg-warning" onclick='document.getElementById("color-name").innerHTML = " Orange"'></button></li>
             <li class="color-item" id="Yellow"><button class="color-btn bg-success"onclick='document.getElementById("color-name").innerHTML = " Green"'></button></li>
@@ -83,7 +86,7 @@
      <div class="modal-content w-50">
         <div class="modal-body">
           <p>Please add the quantity of the item you want</p>
-          <p id="color-id"></p>
+          <div id="color-id"></div>
           <div class="container">
             <div class="row">
               <div class="col">
@@ -94,8 +97,7 @@
             </div>
                <div class="row"> 
                  <div class="col">
-                  <span class="checkout"><button type="button" id="confirm" class="btn  btn-sm bg-primary" 
-                    onclick='document.getElementById("add-to-cart").innerHTML = "Checkout"'>Agree</button></span>
+                  <span class="agree-btn"><button type="button" id="confirm" class="btn  btn-sm bg-primary">Agree</button></span>
                     <span class="close"><button type="button" id="confirm2" class="btn  btn-rounded btn-sm bg-danger" 
                       onclick="document.getElementById('myModal').style.display='none'">Cancel</button></span>
                  </div>
@@ -107,9 +109,55 @@
     </div>
      </div>
 
+     <!-- Button trigger modal -->
+<button type="button" id="checkout" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+ Check Out!
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Pay Now!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Order</th>
+              <th>Quantity</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"></th>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Total</th>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Go back</button>
+        <button type="button" class="btn btn-success" onclick="myFunction()">Pay!</button>
+      </div>
+    </div>
+  </div>
+</div>
+     
       
         <hr class="my-4">
         <p>DETAILS</p>
+        <div id="order-info"></div>
         <hr class="my-4">
          <!-- Trigger/Open The link Modal -->
        <button class="bg-light pb-3" id="need-help"><a href="#linkModal">Need Help?</a></button>
@@ -137,14 +185,20 @@
     </div>
   
     <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#checkout').hide();
+        $('#confirm').on('click', function(){
+          $('#checkout').toggle();
+          $('#add-to-cart').toggle();
+        });
+      });
+  </script>
 
      <!-- JS, Popper.js, and jQuery -->
-     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" 
-     integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" 
-     crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" 
-     integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" 
-     crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
   </body>
 </html>
   

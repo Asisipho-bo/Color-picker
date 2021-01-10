@@ -15,6 +15,10 @@
   }
 
 
+  svg{
+    margin-right: 3px;
+  }
+
 .content{
   align-content: center;
   background-color: White;
@@ -59,6 +63,15 @@ ul{
   }
 
   #add-to-cart{
+    padding: 15px 100px;
+    margin-left: 20px;
+    border-radius: 45px;
+    border: none;
+    background-color: #000;
+    color: white;
+  }
+
+  #checkout{
     padding: 15px 100px;
     margin-left: 20px;
     border-radius: 45px;

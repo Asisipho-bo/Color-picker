@@ -8,7 +8,7 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementById("add-to-cart");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("checkout")[0];
+var span = document.getElementsByClassName("agree-btn")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
@@ -87,3 +87,6 @@ window.onclick = function(event) {
   }
 }
 
+function myFunction() {
+  alert("Thank you for your purchase. Hope to see you soon!");
+}
