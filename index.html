@@ -39,10 +39,10 @@
 
       <div class="row">
           <div class="col">
-            <h2 id="actual-price" class="text-danger font-weight-bold">R0</h2>  
+            <h2 class="text-danger font-weight-bold">R <span id="actual-price" class="text-danger font-weight-bold"></span></h2>
           </div>
           <div class="col">
-            <p><span id="discount-price" class="text-muted">R0</span>  <span class="text-muted">&nbsp &nbsp &nbsp &nbsp25% OFF</span></p>
+            <p class="text-muted">R<span id="discount-price" class="text-muted"></span>  <span class="text-muted">&nbsp &nbsp &nbsp &nbsp25% OFF</span></p>
           </div>
       </div>
       <p class="pt-2 pl-3">ONLINE EXCLUSIVE</p>
@@ -131,13 +131,13 @@
           <tbody>
             <tr>
               <th scope="row"></th>
-              <td></td>
-              <td></td>
+              <td id="color-quantity"></td>
+              <td id="color-price"></td>
             </tr>
             <tr>
               <th scope="row">Total</th>
               <td></td>
-              <td></td>
+              <td id="full-price"></td>
             </tr>
           </tbody>
         </table>
