@@ -1,4 +1,4 @@
-// Display color names on the modal
+// Display color names on the modal and color title; display prices
 function colorFunction() {
   document.getElementById("color-name").innerHTML = " Red";
   document.getElementById("actual-price").innerHTML =" R30.99";
@@ -81,6 +81,18 @@ window.onclick = function(event) {
 }
 
 
+//Reabling minus button from click event of plus button
+const subtractBtn = document.getElementById("subtract");
+const quantityValue = document.getElementById("quantity")
+const addBtn = document.getElementById("add");
+
+subtractBtn.disabled = true;
+
+addBtn.onclick = function() {
+  subtractBtn.disabled = false;
+}
+
+
 //Wnen user clicks +, add 1. When user clicks -, subtract 1
 var valueCount
 
@@ -111,7 +123,9 @@ document.querySelector('#subtract').addEventListener('click', function()
 })
 
 
-
+function quantityFunction() {
+  document.getElementById("counter").innerHTML = document.getElementById("quantity").value;
+}
 
 
 // Get the modal

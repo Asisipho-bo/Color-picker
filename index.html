@@ -94,7 +94,7 @@
             </div>
                <div class="row"> 
                  <div class="col">
-                  <span class="agree-btn"><button type="button" id="confirm" class="btn  btn-sm bg-primary">Agree</button></span>
+                  <span class="agree-btn"><button type="button" id="confirm" class="btn  btn-sm bg-primary" onclick="quantityFunction()">Agree</button></span>
                     <span class="close"><button type="button" id="confirm2" class="btn  btn-rounded btn-sm bg-danger" 
                       onclick="document.getElementById('myModal').style.display='none'">Cancel</button></span>
                  </div>
@@ -183,6 +183,7 @@
   
     <script type="text/javascript" src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!--Toggle and hide checkout button-->
     <script>
       $(document).ready(function(){
         $('#checkout').hide();
